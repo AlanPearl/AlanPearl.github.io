@@ -52,7 +52,7 @@
                 <!-- 	Here is a paragraph where you can put your position and institution, or
                     a short line about yourself.
                 -->
-                <p style="margin-bottom: 0px;">Fifth year PhD candidate</p>
+                <p style="margin-bottom: 0px;">Final year PhD candidate</p>
                 <p style="margin-bottom: 0px;">Department of Physics and Astronomy</p>
                 <p>University of Pittsburgh</p>
                 <!-- Here is a paragraph where you can put a link to your CV -->
@@ -88,7 +88,7 @@
                                                     <a href="#contact">Contact</a>
                                                 </li> -->
                 <!-- 	You can add another button to your navigation menu by adding
-                    another List Item with a link inside of it.
+                    another List Item with a link inside it.
                 -->
                 <!-- <li>
                     <a href="images/Astronomy.jpg">My CV</a>
@@ -111,38 +111,41 @@
             <!-- Here are three paragraphs where you can fill out information about yourself -->
 
             <p><b>
-                <a href="documents/CV-AlanPearl-July2022.pdf">View PDF</a>
+                <a href="documents/CV-AlanPearl-July2022.pdf">View my CV here</a>
             </b></p>
-
-            <p style="margin-bottom: 10pt;">
-                <b>Education:</b>
-            </p>
-
-
-            <p style="margin-bottom: 0;">
-                University of Pittsburgh
-            </p>
-            <p style="margin-bottom: 0;">
-                12/2018 - MS Physics
-            </p>
-            <p style="margin-bottom: 10pt;">
-                Ph.D. Physics expected Spring 2022
-            </p>
-
-
-            <p style="margin-bottom: 0;">
-                Rensselaer Polytechnic Institute
-            </p>
-            <p>
-                05/2017 - BS Physics, <i>magna cum laude</i>
-            </p>
-
 
             <p>
                 <b>Publications:</b>
                 <a href="https://ui.adsabs.harvard.edu/search/p_=0&q=orcid%3A0000-0001-9820-9619&sort=date%20desc%2C%20bibcode%20desc">
                     See my papers on ADS</a>
             </p>
+
+            <h3 style="margin-bottom: 10pt; font-size: 20pt">
+                <u>Education</u>
+            </h3>
+
+            <ul>
+            <li>
+            <p style="margin-bottom: 0;">
+                <b>University of Pittsburgh</b>
+            </p>
+            <p style="margin-bottom: 0;">
+                Ph.D. Physics expected Spring 2023
+            </p>
+            <p style="margin-bottom: 10pt;">
+                12/2018 - MS Physics
+            </p>
+            </li>
+
+
+            <li><p style="margin-bottom: 0;">
+                <b>Rensselaer Polytechnic Institute</b>
+            </p>
+            <p>
+                05/2017 - BS Physics, <i>magna cum laude</i>
+            </p></li>
+            </ul>
+
 <!--            <p>-->
 <!--                <b>Late stage drafts:</b>-->
 <!--                <a href="documents/climber-paper.pdf">-->
@@ -155,23 +158,25 @@
             <h2 class="major">Software</h2>
             <!--							</span>-->
 
-            <p>
+            <ul>
+            <li><p>
                 <a href="https://github.com/AlanPearl/mocksurvey/">
                     mocksurvey</a> is a Python package that can be used for
-                creating mock surveys using the UniverseMachine empirical model.
-            </p>
+                creating mock surveys seeded from the UniverseMachine empirical model.
+            </p></li>
 
-            <p>
+            <li><p>
                 <a href="https://github.com/AlanPearl/galtab/">
                     galtab</a> is a Python package that tabulates possible galaxy
-                locations to speed up clustering codes like counts-in-cylinders
-            </p>
+                locations to speed up computation of counts-in-cylinders
+            </p></li>
 
-            <p>
+            <li><p>
                 I am a contributor to <a href="https://github.com/astropy/halotools/">
                 halotools</a>, which is a Python package that provides a wide array
                 of models of the galaxy-halo connection.
-            </p>
+            </p></li>
+            </ul>
 
         </article>
         <article id="data">
@@ -199,25 +204,30 @@
                     See my papers on ADS</a>
             </p>
 
-            <h3><b>Research Interests</b></h3>
+            <h3><b>Thesis Overview</b></h3>
             <p>
-                I am interested in the galaxy-halo connection. This means I want to understand
-                what types of galaxies are likely to live inside of a dark matter halo with given
-                properties. We already know that there is a correlation between the mass of a galaxy
-                and the mass of its host halo. Additionally, recent evidence has pointed towards a
+                My goal is to improve our understanding of the galaxy-halo connection.
+                This is broadly defined as learning what types of galaxies are likely to form inside
+                a dark matter halo with given properties.
+                This is an important statistical relationship to understand in order to compare
+                our theory to observations,
+                We already know that there is a correlation between the mass of a galaxy
+                and the mass of its host halo.
+                Additionally, recent evidence has pointed towards a
                 secondary correlation between the star formation rate of the galaxy and the mass
-                accretion rate of the halo. A more complete understanding of this relationship
+                accretion rate of the halo.
+                A more complete understanding of this relationship
                 would have profound implications on our understanding of galaxy formation and evolution.
             </p>
 
-            <p>
-                My research aims to answer what types of galaxy surveys we need to be able to constrain
-                galaxy-halo connection models. Assuming a model, I generate samples of mock galaxies over
-                dark matter simulations. I then conduct mock surveys, and vary several parameters, such as
-                the area, depth, threshold, and completeness fraction of the survey. By comparing several
-                statistics from these mock observations, I can deduce which ones would be the most useful
-                to our goal of learning about the galaxy-halo connection.
-            </p>
+<!--            <p>-->
+<!--                My research aims to answer what types of galaxy surveys we need to be able to constrain-->
+<!--                galaxy-halo connection models. Assuming a model, I generate samples of mock galaxies over-->
+<!--                dark matter simulations. I then conduct mock surveys, and vary several parameters, such as-->
+<!--                the area, depth, threshold, and completeness fraction of the survey. By comparing several-->
+<!--                statistics from these mock observations, I can deduce which ones would be the most useful-->
+<!--                to our goal of learning about the galaxy-halo connection.-->
+<!--            </p>-->
 
             <h3><b>Research Projects</b></h3>
 
@@ -227,7 +237,9 @@
             <p>
                 Using UniverseMachine as a model and UltraVISTA photometry as training data, I created
                 a mock galaxy catalog specifically tailored to making predictions for the upcoming
-                PFS survey. This mock is publicly available
+                PFS survey. Using this mock, I published a paper which demonstrated that future extensions
+                of the PFS survey should prioritize increasing the survey area to best improve scientific
+                goals. This mock is publicly available
                 <a href="https://pitt.box.com/s/3mes7dipabo1mx06m4xdd5yaq0fr9461">here</a>.
             </p>
 
