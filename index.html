@@ -52,12 +52,13 @@
                 <!-- 	Here is a paragraph where you can put your position and institution, or
                     a short line about yourself.
                 -->
-                <p style="margin-bottom: 0px;">Final year Ph.D candidate</p>
+                <p style="margin-bottom: 0px;">Final year PhD candidate</p>
                 <p style="margin-bottom: 0px;">Department of Physics and Astronomy</p>
-                <p>University of Pittsburgh</p>
+                <p style="margin-bottom: 0px">University of Pittsburgh</p>
+                <p>Soon-to-be Postdoc at Argonne National Lab</p>
                 <!-- Here is a paragraph where you can put a link to your CV -->
                 <p>
-                    Contact me: <a href="mailto:alanpearl@pitt.edu">alanpearl@pitt.edu</a>
+                    Contact me: <a href="mailto:alannpearl@outlook.com">alannpearl@outlook.com</a>
                 </p>
             </div>
         </div>
@@ -70,16 +71,19 @@
                     <!-- 	Note that this links to #about, which will move the page to wherever
                         the element with the id "about" exists.
                     -->
-                    <a href="#cv">CV</a>
+                    <a href="#cv" style="margin-left: -5pt">Curriculum Vitae</a>
+                </li>
+<!--                <li>
+                    <a href="#educational">Educational Materials</a>
+                </li>-->
+                <li>
+                    <a href="#science">Science Interests</a>
                 </li>
                 <li>
-                    <a href="#projects">Projects</a>
+                    <a href="#software">Software Projects</a>
                 </li>
                 <li>
-                    <a href="#software">Software</a>
-                </li>
-                <li>
-                    <a href="#data">Data</a>
+                    <a href="#data" style="margin-right: 5pt">Data Products</a>
                 </li>
                 <!-- 								<li>
                                                     <a href="#community">Community</a>
@@ -109,20 +113,36 @@
                                             <img src="images/pic01.jpg" alt=""/> -->
             <!--							</span>-->
             <!-- Here are three paragraphs where you can fill out information about yourself -->
+            <h6 style="margin-bottom: 10pt; font-size: 20pt">
+                Links
+            </h6>
 
-            <p><b>
-                <a href="documents/CV-AlanPearl-July2022.pdf">View my CV here</a>
-            </b></p>
+            <ul>
+            <li>
+            <p style="margin-bottom: 10pt;"><a href="documents/Resume_AlanPearl_January2023.pdf"><b>
+                View my data science resume
+            </b></a></p>
+            </li>
+            <li>
+            <p style="margin-bottom: 10pt;"><a href="https://linkedin.com/in/alannpearl"><b>
+                View my LinkedIn Profile
+            </b></a></p>
+            </li>
+            <li>
+            <p style="margin-bottom: 10pt;"><a href="documents/CV_AlanPearl_January2023.pdf"><b>
+                View my full academic CV
+            </b></a></p>
+            </li>
+            <li>
+            <p style="margin-bottom: 10pt;"><a href="https://ui.adsabs.harvard.edu/search/p_=0&q=orcid%3A0000-0001-9820-9619&sort=date%20desc%2C%20bibcode%20desc">
+                <b>Publications: See my papers on ADS</b>
+            </a></p>
+            </li>
+            </ul>
 
-            <p>
-                <b>Publications:</b>
-                <a href="https://ui.adsabs.harvard.edu/search/p_=0&q=orcid%3A0000-0001-9820-9619&sort=date%20desc%2C%20bibcode%20desc">
-                    See my papers on ADS</a>
-            </p>
-
-            <h3 style="margin-bottom: 10pt; font-size: 20pt">
-                <u>Education</u>
-            </h3>
+            <h6 style="margin-bottom: 10pt; font-size: 20pt">
+                Education
+            </h6>
 
             <ul>
             <li>
@@ -130,10 +150,10 @@
                 <b>University of Pittsburgh</b>
             </p>
             <p style="margin-bottom: 0;">
-                Ph.D. Physics expected Spring 2023
+                (Expected Spring 2023) - Ph.D. Physics
             </p>
             <p style="margin-bottom: 10pt;">
-                12/2018 - MS Physics
+                12/2018 - M.S. Physics
             </p>
             </li>
 
@@ -142,7 +162,7 @@
                 <b>Rensselaer Polytechnic Institute</b>
             </p>
             <p>
-                05/2017 - BS Physics, <i>magna cum laude</i>
+                05/2017 - B.S. Physics, <i>magna cum laude</i>
             </p></li>
             </ul>
 
@@ -155,20 +175,29 @@
         </article>
 
         <article id="software">
-            <h2 class="major">Software</h2>
+            <h2 class="major">Software Projects</h2>
             <!--							</span>-->
 
             <ul>
             <li><p>
                 <a href="https://github.com/AlanPearl/mocksurvey/">
-                    mocksurvey</a> is a Python package that can be used for
-                creating mock surveys seeded from the UniverseMachine empirical model.
+                    mocksurvey</a> is a Python package used for constructing mock
+                galaxy catalogs and perform mock surveys seeded from the
+                UniverseMachine empirical model.
+            </p></li>
+
+            <li><p>
+                <a href="https://github.com/AlanPearl/JaxTabCorr/">
+                    JaxTabCorr</a> is a Python package that integrates classes from
+                TabCorr and halotools into a differentiable prediction framework made
+                possible by JAX autodiff libraries.
             </p></li>
 
             <li><p>
                 <a href="https://github.com/AlanPearl/galtab/">
                     galtab</a> is a Python package that tabulates possible galaxy
-                locations to speed up computation of counts-in-cylinders
+                locations to improve prediction efficiency of my
+                Counts-in-Cylinders estimator.
             </p></li>
 
             <li><p>
@@ -180,7 +209,7 @@
 
         </article>
         <article id="data">
-            <h2 class="major">Data</h2>
+            <h2 class="major">Data Products</h2>
             <!--							</span>-->
 
             <h3>Mock Galaxy Catalogs</h3>
@@ -191,8 +220,8 @@
         </article>
 
         <!-- Here is the "Projects" card. -->
-        <article id="projects">
-            <h2 class="major">Projects</h2>
+        <article id="science">
+            <h2 class="major">Science Interests</h2>
             <!-- 							<span class="image main">
                                             <img src="images/pic02.jpg" alt=""/> -->
             <!--							</span>-->
@@ -204,35 +233,17 @@
                     See my papers on ADS</a>
             </p>
 
-            <h3><b>Ph.D Thesis Overview</b></h3>
+            <h3><b>Astrophysics PhD Thesis</b></h3>
             <p>
-                My goal is to improve our understanding of the galaxy-halo connection.
-                This is broadly defined as learning what types of galaxies are likely to form inside
-                a dark matter halo with given properties.
-                This is an important statistical relationship to understand in order to compare
-                our theory to observations,
-                We already know that there is a correlation between the mass of a galaxy
-                and the mass of its host halo.
-                Additionally, recent evidence has pointed towards a
-                secondary correlation between the star formation rate of the galaxy and the mass
-                accretion rate of the halo.
-                A more complete understanding of this relationship
-                would have profound implications on our understanding of galaxy formation and evolution.
+                <u>Illuminating and Tabulating the Galaxy-Halo Connection</u>
             </p>
 
-<!--            <p>-->
-<!--                My research aims to answer what types of galaxy surveys we need to be able to constrain-->
-<!--                galaxy-halo connection models. Assuming a model, I generate samples of mock galaxies over-->
-<!--                dark matter simulations. I then conduct mock surveys, and vary several parameters, such as-->
-<!--                the area, depth, threshold, and completeness fraction of the survey. By comparing several-->
-<!--                statistics from these mock observations, I can deduce which ones would be the most useful-->
-<!--                to our goal of learning about the galaxy-halo connection.-->
-<!--            </p>-->
+            <p>
 
-            <h3><b>Astrophysics Research Projects</b></h3>
+            </p>
 
             <p style="margin-bottom: 0;">
-                <b>Project I: Created mock survey for PFS</b>
+                <b>Part I: Illuminated the UniverseMachine to construct PFS mock catalogs</b>
             </p>
             <p>
                 Using UniverseMachine as a model and UltraVISTA photometry as training data, I created
@@ -246,15 +257,35 @@
             </p>
 
             <p style="margin-bottom: 0;">
-                <b>Project II: Implementing differentiable HOD models</b>
+                <b>Part II: Tabulated statistical estimators to be fast, precise, and differentiable</b>
             </p>
-            <p>
+            <p style="margin-bottom: 5pt">
                 The galaxy-halo connection is typically analyzed via Markov-chain Monte Carlo (MCMC)
                 sampling of parameter-space in order to place constraints on models. However, this process
-                is greatly hampered by the stochastic nature of halo occupation distribution (HOD) models.
-                Implementing a probabilistic and differentiable model will increase MCMC efficiency by
-                several orders of magnitude, drastically broadening the possibilities of this analysis.
+                is slowed down by the stochastic nature of halo occupation distribution (HOD) models.
+                I have improved the efficiency of this process with two open-source projects:
             </p>
+                <ul>
+                <li>
+                    <a href="https://github.com/AlanPearl/JaxTabCorr">JaxTabCorr</a>, in which I
+                    have rewritten parts of the TabCorr and halotools packages to replace certain
+                    NumPy operations with equivalent JAX operations. It can be used to calculate
+                    differentiable predictions of two-point correlation functions, which drastically
+                    improves the scalability of model inference as we need to push to larger and
+                    larger parameter spaces.
+                </li>
+                <li>
+                    <a href="https://github.com/AlanPearl/galtab">galtab</a>, in which I have
+                    implemented a tabulation-accelerated statistic called Counts-in-Cylinders
+                    (CiC) that captures higher-order clustering information beyond that of the
+                    two-point correlation function. This code is also differentiable, but with
+                    limited functionality. I am currently preparing a paper the presents this
+                    code, as well as the new HOD constraints that it has made possible, utilizing
+                    an early data release from the Dark Energy Spectroscopic Instrument (DESI).
+                    See the slides for my proposal of this project
+                    <a href="links/cic-bgs-hod.html">here</a>.
+                </li>
+                </ul>
             <!--							<p>
                                             <b>Project II Title</b><br>Project description, including further links
                                                                     to posters, talks, publications.
