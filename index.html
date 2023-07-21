@@ -48,17 +48,16 @@
 
                     Try adding "border-radius: 50%;" to the style attribute.
                 -->
-                <img src="images/grand-canyon-headshot.jpeg" style="width:280px; height:280px; object-fit: cover;">
+                <img src="images/headshot-pgh-smoothed.png" style="width:390px; height:390px; object-fit: cover; image-rendering: auto;">
                 <!-- 	Here is a paragraph where you can put your position and institution, or
                     a short line about yourself.
                 -->
-                <p style="margin-bottom: 0px;">Final year PhD candidate</p>
-                <p style="margin-bottom: 0px;">Department of Physics and Astronomy</p>
-                <p style="margin-bottom: 0px">University of Pittsburgh</p>
-                <p>Soon-to-be Postdoc at Argonne National Lab</p>
+                <p style="margin-bottom: 0px;">Cosmology Postdoctoral Appointee</p>
+                <p style="margin-bottom: 0px;">Cosmological Physics and Advanced Computing (CPAC) Group</p>
+                <p style="margin-bottom: 0px">Argonne National Laboratory</p>
                 <!-- Here is a paragraph where you can put a link to your CV -->
                 <p>
-                    Contact me: <a href="mailto:alannpearl@outlook.com">alannpearl@outlook.com</a>
+                    Contact me: <a href="mailto:alanpearl13@gmail.com">alanpearl13@gmail.com</a>
                 </p>
             </div>
         </div>
@@ -129,7 +128,7 @@
             </b></a></p>
             </li>
             <li>
-            <p style="margin-bottom: 10pt;"><a href="documents/CV_AlanPearl_January2023.pdf"><b>
+            <p style="margin-bottom: 10pt;"><a href="documents/CV_AlanPearl_July2023.pdf"><b>
                 View my full academic CV
             </b></a></p>
             </li>
@@ -236,8 +235,18 @@
             <h3><b>Astrophysics PhD Thesis</b></h3>
             <p>
                 <u>Illuminating and Tabulating the Galaxy-Halo Connection</u>
-                <br>
-                <a href="documents/phd_thesis.pdf">Full thesis PDF</a>
+                <ul style="margin-top: -25px;">
+                    <li>
+                        <a href="documents/phd_thesis.pdf">
+                            Read thesis dissertation
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/watch?v=TB56zpMLP50&ab_channel=AlanPearl">
+                            Watch thesis defense
+                        </a>
+                    </li>
+                </ul>
 
             </p>
 
@@ -273,20 +282,19 @@
                     <a href="https://github.com/AlanPearl/JaxTabCorr">JaxTabCorr</a>, in which I
                     have rewritten parts of the TabCorr and halotools packages to replace certain
                     NumPy operations with equivalent JAX operations. It can be used to calculate
-                    differentiable predictions of two-point correlation functions, which drastically
-                    improves the scalability of model inference as we need to push to larger and
+                    differentiable predictions of two-point correlation functions, which will
+                    improve the scalability of model inference as we need to push to larger and
                     larger parameter spaces.
                 </li>
                 <li>
                     <a href="https://github.com/AlanPearl/galtab">galtab</a>, in which I have
                     implemented a tabulation-accelerated statistic called Counts-in-Cylinders
                     (CiC) that captures higher-order clustering information beyond that of the
-                    two-point correlation function. This code is also differentiable, but with
-                    limited functionality. I am currently preparing a <a
-                    href="documents/galtab-paper.pdf">late-stage paper draft</a> to present this
+                    two-point correlation function. This code is also differentiable and
+                    automatically GPU-accelerated. I am preparing to submit a <a
+                    href="documents/galtab-paper.pdf">late-stage paper draft</a> presenting this
                     code, as well as the new HOD constraints that it has made possible, utilizing
-                    an early data release from the Dark Energy Spectroscopic Instrument (DESI).
-                    <a href="links/cic-bgs-hod.html">here</a>.
+                    the early data release from the Dark Energy Spectroscopic Instrument (DESI).
                 </li>
                 </ul>
             <!--							<p>
