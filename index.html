@@ -219,23 +219,27 @@
         <article id="science">
             <h2 class="major">My Data Science Projects</h2>
 
+            <p>
+                I have led the development of the following data science projects during my postdoc at Argonne National Lab. Continue scrolling to learn about the class of astrophyiscal models they are being applied to.
+            </p>
+
             <p style="font-size:24px;"><b>kdescent</b></p>
             <p>
                 Fitting a population model with many parameters to multi-dimensional demographics is a notoriously difficult machine learning problem. <a href="https://github.com/AlanPearl/kdescent">kdescent</a> presents a flexible stochastic gradient descent solution. kdescent draws a very small, random "mini-batch" of the training data (n = 20 for this example) and constructs a kernel density estimation (KDE) of the distribution, using these 20 random kernel centers, as shown by the example below.
             </p>
             <p>
-                <img src="images/kdescent/twenty-random-kernels.png" style="width:500px;">
+                <img src="images/datascience/twenty-random-kernels.png" style="width:550px;">
                 <br> Figure 1: Each panel shows example training data, colored by a kernel weight. The kernel centers were chosen randomly from the training data. We adopt a Gaussian kernel with the Scott's rule bandwidth (stretched according to the inverse principle component transformation).
             </p>
             <p>
-                <img src="images/kdescent/combined-kde.png" style="width:500px;">
+                <img src="images/datascience/combined-kde.png" style="width:550px;">
                 <br> Figure 2: The left panel is colored by number density of the training data in small spatial bins. The right panel attempts to approximately reproduce the population distribution, while only knowing 20 points using KDE (basically just averaging the twenty kernels from above).
             </p>
             <p>
                 Now imagine we are modeling this population (for testing, we will simply populate samples from a 2D multivariate normal distribution, which means we are fitting 5-parameters: 2 means, 2 variances, and 1 correlation coefficient). Thanks to the JAX implementation of kdescent, we can fit these parameters using a gradient descent algorithm, such as Adam, defining the loss as the mean-squared error of the number density within each kernel. By re-drawing our kernels at each iteration, we are able to (a) fairly probe the training data and (b) avoid getting stuck in local minima. The animation below shows this 5-parameter fit in action.
             </p>
             <p>
-                <img src="images/kdescent/kdescent-gaussian2d-adam.gif" style="width:500px;">
+                <img src="images/datascience/kdescent-gaussian2d-adam.gif" style="width:550px;">
                 <br> Figure 3: Animation of 200 iterations of the Adam gradient descent algorithm, using the loss function described above. The left panel shows the parameters converging to their known true values. The right panel shows the model distribution moving, stretching, and rotating until it finally converges upon the correct distribution.
             </p>
 
@@ -243,10 +247,18 @@
             <p>
                 I am actively working on a particle swarm optimization (PSO) implementation that is suitable for massively parallel parameter optimizations. A benefit of particle swarm optimization is that it doesn't require gradient calculations, so it works for non-differentiable models, and it is very fast and massively parallelizable. The current state of this project can be viewed in the <a href="https://github.com/AlanPearl/mpipso">mpipso</a> package.
             </p>
+            <p>
+                <img src="images/datascience/mpipso-himelblau.gif" style="width:550px;">
+                <br> Figure 4: Proof of concept of a swarm of three particles converging upon the global minimum of a modified Himelblau objective function.
+            </p>
 
             <p style="font-size:24px;"><b>Parallel Gradients</b></p>
             <p>
                 The JAX Python library allows us to create extremely powerful, fast, differentiable models without requiring excessive development time. However, efficiently calculating a gradient in parallel is not trivial. This is a huge hurdle for big-data problems, where our data must be distributed across several nodes, and prevents us from taking advantage of the full processing power of each node. Therefore, I built a framework to simplify this process, and implemented it in the <a href="https://github.com/AlanPearl/multidiff">multidiff</a> package. In brief, it works by allowing users to define functions that compute linear statistics that are summed over the data on each node. Not only are the resulting statistics computed automatically, but the chain rule is preserved by exploiting the <a href="https://jax.readthedocs.io/en/latest/notebooks/autodiff_cookbook.html#how-it-s-made-two-foundational-autodiff-functions">vector-Jacobian product</a>, allowing us to propagate the the derivatives to any desired loss function.
+            </p>
+            <p>
+                <img src="images/datascience/multidiff-subvolumes.png" style="width:550px;">
+                <br> Figure 5: Subvolume division in which each partial gradient is computed before MPI combines everything with one simple addition reduction.
             </p>
 
             <h2 class="major">Astrophysics</h2>
