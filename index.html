@@ -52,7 +52,7 @@
                 <!-- 	Here is a paragraph where you can put your position and institution, or
                     a short line about yourself.
                 -->
-                <p style="margin-bottom: 0px;">Postdoctoral Appointee</p>
+                <p style="margin-bottom: 0px;">Postdoctoral Researcher</p>
                 <p style="margin-bottom: 0px;">Cosmological Physics and Advanced Computing (CPAC) Group</p>
                 <p style="margin-bottom: 0px">Argonne National Laboratory</p>
                 <!-- Here is a paragraph where you can put a link to your CV -->
@@ -70,19 +70,19 @@
                     <!-- 	Note that this links to #about, which will move the page to wherever
                         the element with the id "about" exists.
                     -->
-                    <a href="#cv" style="margin-left: -5pt">Curriculum Vitae</a>
+                    <a href="#cv" style="margin-right: -10pt">Curriculum Vitae</a>
                 </li>
 <!--                <li>
                     <a href="#educational">Educational Materials</a>
                 </li>-->
                 <li>
-                    <a href="#science">Data Science</a>
+                    <a href="#science" style="margin-right: 25pt">Data Science</a>
                 </li>
                 <li>
-                    <a href="#software">GitHub Repos</a>
+                    <a href="#software" style="margin-right: 20pt">Software</a>
                 </li>
                 <li>
-                    <a href="#data" style="margin-right: 5pt">Data Products</a>
+                    <a href="#data" style="margin-right: 5pt">Data Catalogs</a>
                 </li>
                 <!-- 								<li>
                                                     <a href="#community">Community</a>
@@ -172,8 +172,17 @@
             <!--							</span>-->
 
             <ul>
+
             <li><p>
-                <a href="https://github.com/AlanPearl/galtab/">
+                <a href="https://diffopt.readthedocs.io/">
+                diffopt</a> is a Python package that combines various tools
+                and techniques for parallelizable parameter optimization,
+                including gradient-based techniques powered by a parallel
+                extension to Jax autodiff capabililties.
+            </p></li>
+
+            <li><p>
+                <a href="https://galtab.readthedocs.io/">
                 galtab</a> is a key Python package that enabled much of
                 the work in my PhD thesis by pretabulating galaxy
                 placeholders to improve prediction efficiency of my
@@ -183,8 +192,8 @@
             <li><p>
                 <a href="https://github.com/AlanPearl/JaxTabCorr/">
                 JaxTabCorr</a> is a Python package that integrates classes from
-                TabCorr and halotools into a differentiable prediction framework made
-                possible by JAX autodiff libraries.
+                TabCorr and halotools into a differentiable prediction
+                framework made possible by Jax autodiff libraries.
             </p></li>
 
             <li><p>
@@ -195,9 +204,9 @@
             </p></li>
 
             <li><p>
-                I am a contributor to <a href="https://github.com/astropy/halotools/">
-                halotools</a>, which is a Python package that provides a wide array
-                of models of the galaxy-halo connection.
+                I contribute to <a href="https://halotools.readthedocs.io/">
+                halotools</a>, which is a Python package that provides a wide
+                array of models of the galaxy-halo connection.
             </p></li>
             </ul>
 
@@ -220,12 +229,13 @@
             <h2 class="major">My Data Science Projects</h2>
 
             <p>
-                I have led the development of the following data science projects during my postdoc at Argonne National Lab. Continue scrolling to learn about the class of astrophyiscal models they are being applied to.
+                I have led the development of the following data science projects during my postdoc at Argonne National Lab. Continue scrolling to learn about the class of astrophyiscal models they are being applied to. Documentation for these projects can all be found within the 
+                <a href="https://diffopt.readthedocs.io">diffopt</a> docs page.
             </p>
 
             <p style="font-size:24px;"><b>kdescent</b></p>
             <p>
-                Fitting a population model with many parameters to multi-dimensional demographics is a notoriously difficult machine learning problem. <a href="https://github.com/AlanPearl/kdescent">kdescent</a> presents a flexible stochastic gradient descent solution. kdescent draws a very small, random "mini-batch" of the training data (n = 20 for this example) and constructs a kernel density estimation (KDE) of the distribution, using these 20 random kernel centers, as shown by the example below.
+                Fitting a population model with many parameters to multi-dimensional demographics is a notoriously difficult machine learning problem. <a href="https://diffopt.readthedocs.io/en/latest/kdescent/intro.html">kdescent</a> presents a flexible stochastic gradient descent solution. kdescent draws a very small, random "mini-batch" of the training data (n = 20 for this example) and constructs a kernel density estimation (KDE) of the distribution, using these 20 random kernel centers, as shown by the example below.
             </p>
             <p>
                 <img src="images/datascience/twenty-random-kernels.png" style="width:550px;">
@@ -245,7 +255,7 @@
 
             <p style="font-size:24px;"><b>Parallel Gradients</b></p>
             <p>
-                The JAX Python library allows us to create extremely powerful, fast, differentiable models without requiring excessive development time. However, efficiently calculating a gradient in parallel is not trivial. This is a huge hurdle for big-data problems, where our data must be distributed across several nodes, and prevents us from taking advantage of the full processing power of each node. Therefore, I built a framework to simplify this process, and implemented it in the <a href="https://github.com/AlanPearl/multigrad">multigrad</a> package. In brief, it works by allowing users to define functions that compute linear statistics that are summed over the data on each node. Not only are the resulting statistics computed automatically, but the chain rule is preserved by exploiting the <a href="https://jax.readthedocs.io/en/latest/notebooks/autodiff_cookbook.html#how-it-s-made-two-foundational-autodiff-functions">vector-Jacobian product</a>, allowing us to propagate the the derivatives to any desired loss function.
+                The JAX Python library allows us to create extremely powerful, fast, differentiable models without requiring excessive development time. However, efficiently calculating a gradient in parallel is not trivial. This is a huge hurdle for big-data problems, where our data must be distributed across several nodes, and prevents us from taking advantage of the full processing power of each node. Therefore, I built a framework to simplify this process, and implemented it in the <a href="https://diffopt.readthedocs.io/en/latest/multigrad/intro.html">multigrad</a> package. In brief, it works by allowing users to define functions that compute linear statistics that are summed over the data on each node. Not only are the resulting statistics computed automatically, but the chain rule is preserved by exploiting the <a href="https://jax.readthedocs.io/en/latest/notebooks/autodiff_cookbook.html#how-it-s-made-two-foundational-autodiff-functions">vector-Jacobian product</a>, allowing us to propagate the the derivatives to any desired loss function.
             </p>
             <p>
                 <img src="images/datascience/multigrad-subvolumes.png" style="width:550px;">
@@ -254,7 +264,7 @@
 
             <p style="font-size:24px;"><b>Particle Swarm Optimization</b></p>
             <p>
-                The greatest challenge posed to gradient descent is the risk of getting stuck in local minima. It is therefore necessary to start from a reasonable initial condition, either using analytic approximations or exploratory parameter scans. One of the most powerful methods to run an exploratory parameter scan is known as Particle Swarm Optimization (PSO), in which a set number of particles are initialized along a Latin Hypercube with randomized velocities and accelerate according to a cognitive weight (which pulls towards the best loss found by each particle) and a social weight (which pulls towards the best loss found by the entire swarm). I have built a PSO implementation, <a href="https://github.com/AlanPearl/multiswarm">multiswarm</a>, that hosts particles across various MPI tasks. Since PSO doesn't require gradient calculations, it is applicable to a wider range of models and has much lower memory requirements than differentiable methods, making it very fast and massively parallelizable.
+                The greatest challenge posed to gradient descent is the risk of getting stuck in local minima. It is therefore necessary to start from a reasonable initial condition, either using analytic approximations or exploratory parameter scans. One of the most powerful methods to run an exploratory parameter scan is known as Particle Swarm Optimization (PSO), in which a set number of particles are initialized along a Latin Hypercube with randomized velocities and accelerate according to a cognitive weight (which pulls towards the best loss found by each particle) and a social weight (which pulls towards the best loss found by the entire swarm). I have built a PSO implementation, <a href="https://diffopt.readthedocs.io/en/latest/multiswarm/intro.html">multiswarm</a>, that hosts particles across various MPI tasks. Since PSO doesn't require gradient calculations, it is applicable to a wider range of models and has much lower memory requirements than differentiable methods, making it very fast and massively parallelizable.
             </p>
             <p>
                 <img src="images/datascience/pso-ackley5d-params0-1.gif" style="width:550px;">
@@ -275,7 +285,7 @@
 
             <p style="font-size:24px;"><b>Postdoc at Argonne</b></p>
             <p>
-                I work closely with Andrew Hearin and others to develop models of the galaxy-halo connection, implemented with Python's JAX library to enable GPU acceleration and automatic differentiation. I am focusing on improving the scalability of our model to extremely large datasets by designing a framework that performs distributed parallel computation, while seamlessly preserving the advantages of JAX. I plan on utilizing this framework to make self-consistent mock observations on cosmological simulations, thereby minimizing biases in the joint inference of cosmology and galaxy formation physics.
+                I work closely with Andrew Hearin and others to develop models of the galaxy-halo connection, implemented with Python's JAX library to enable GPU acceleration and automatic differentiation. I am focusing on improving the scalability of our model to extremely large datasets by designing a framework that performs distributed parallel computation, while seamlessly preserving the advantages of JAX (powered by the data science projects listed above). I plan on utilizing this framework to make self-consistent mock observations on cosmological simulations, thereby minimizing biases in the joint inference of cosmology and galaxy formation physics.
             </p>
 
             <p style="font-size:24px;"><b>PhD Thesis</b></p>
